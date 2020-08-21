@@ -22,7 +22,9 @@ const { byteToFloat16, float16ToByte } = require('float16');
 byteToFloat16(0x3c00)).toBe(1);
 byteToFloat16(1)).toBe(0x3c00);
 ```
-
+byteToFloat16的参数是uint16
+let view = new DataView(buffer);
+var z=byteToFloat16(view.getUint16(2*i,true));
 
 ## License
 
